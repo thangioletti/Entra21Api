@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using MinhaApiBonita.Contracts.Repository;
+using MinhaApiBonita.DTO;
 using MinhaApiBonita.Entity;
 using MinhaApiBonita.Infrastructure;
 
@@ -7,14 +8,20 @@ namespace MinhaApiBonita.Repository
 {
     public class UserRepository : Connection, IUserRepository
     {
-        public Task Add(UserEntity user)
+        public async Task Add(UserDTO user)
         {
-            throw new NotImplementedException();
+            string sql = @"
+                INSERT INTO USER (Name, Email, Password)
+                            VALUE (@Name, @Email, @Password)
+            ";
+            await Execute(sql, user);
+
         }
 
-        public Task Delete(UserEntity user)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            string sql = "DELETE FROM USER WHERE Id = @id";
+            await Execute(sql, new { id });
         }
 
         public async Task<IEnumerable<UserEntity>> Get()
@@ -24,14 +31,22 @@ namespace MinhaApiBonita.Repository
             
         }
 
-        public Task<UserEntity> GetById(int id)
+        public async Task<UserEntity> GetById(int id)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT * FROM USER WHERE Id = @id";
+            return await GetConnection().QueryFirstAsync<UserEntity>(sql, new { id });
         }
 
-        public Task Update(UserEntity user)
+        public async Task Update(UserEntity user)
         {
-            throw new NotImplementedException();
+            string sql = @"
+                UPDATE USER 
+                   SET Name = @Name, 
+                       Email = @Email, 
+                       Password = @Password
+                 WHERE Id = @Id
+            ";
+            await Execute(sql, user);
         }
     }
 }

@@ -37,6 +37,16 @@ namespace MinhaApiBonita.Repository
             return await GetConnection().QueryFirstAsync<UserEntity>(sql, new { id });
         }
 
+        public async Task<UserTokenDTO> LogIn(UserLoginDTO user)
+        {
+            string sql = "SELECT * FROM user WHERE Email = @Email AND Password = @Password";
+            UserEntity userLogin = await GetConnection().QueryFirstAsync<UserEntity>(sql, user);
+            return new UserTokenDTO
+            {
+                Token = Authentication.GenerateToken(userLogin)
+            };
+        }
+
         public async Task Update(UserEntity user)
         {
             string sql = @"
@@ -48,5 +58,7 @@ namespace MinhaApiBonita.Repository
             ";
             await Execute(sql, user);
         }
+
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MinhaApiBonita.Contracts.Repository;
 using MinhaApiBonita.DTO;
 using MinhaApiBonita.Entity;
@@ -16,6 +17,7 @@ namespace MinhaApiBonita.Controllers
             _userRepository = userRepository;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -47,6 +49,19 @@ namespace MinhaApiBonita.Controllers
         {
             await _userRepository.Delete(id);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> LogIn(UserLoginDTO user)
+        {
+            try
+            {
+                return Ok(await _userRepository.LogIn(user));
+            } catch (Exception ex)
+            {
+                return Unauthorized("Usuário ou senha invalidos");
+            }
         }
     }
 }

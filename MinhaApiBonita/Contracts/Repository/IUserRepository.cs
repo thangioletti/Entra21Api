@@ -10,5 +10,7 @@ namespace MinhaApiBonita.Contracts.Repository
         Task Delete(int id);
         Task<UserEntity> GetById(int id);
         Task<IEnumerable<UserEntity>> Get();
+
+        Task<UserTokenDTO> LogIn(UserLoginDTO user);
     }
 }

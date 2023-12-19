@@ -63,5 +63,16 @@ namespace MinhaApiBonita.Controllers
                 return Unauthorized("Usuário ou senha invalidos");
             }
         }
+
+        [HttpGet]
+        [Route("salarios")]
+        [Authorize(Roles = "admin")]
+        public string Salarios() => "Salario";
+
+        [HttpGet]
+        [Route("funcionarios")]
+        [Authorize(Roles = "default")]
+        public string Funcionarios() => "Funcionarios";
+
     }
 }

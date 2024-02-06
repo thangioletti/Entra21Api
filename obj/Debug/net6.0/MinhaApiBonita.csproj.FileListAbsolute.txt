@@ -134,3 +134,4 @@ C:/Users/tiago.angioletti/source/repos/MinhaApiBonita/MinhaApiBonita/bin/Debug/n
 /Users/tiagohenriqueangioletti/Projetos/Senac/Entra21Api/MinhaApiBonita/obj/Debug/net6.0/MinhaApiBonita.pdb
 /Users/tiagohenriqueangioletti/Projetos/Senac/Entra21Api/MinhaApiBonita/obj/Debug/net6.0/MinhaApiBonita.genruntimeconfig.cache
 /Users/tiagohenriqueangioletti/Projetos/Senac/Entra21Api/MinhaApiBonita/obj/Debug/net6.0/ref/MinhaApiBonita.dll
+/Users/tiagohenriqueangioletti/Projetos/Senac/Entra21Api/MinhaApiBonita/obj/Debug/net6.0/MinhaApiBonita.sourcelink.json

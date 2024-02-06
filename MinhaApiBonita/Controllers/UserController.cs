@@ -17,7 +17,6 @@ namespace MinhaApiBonita.Controllers
             _userRepository = userRepository;
         }
 
-        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -34,21 +33,21 @@ namespace MinhaApiBonita.Controllers
         public async Task<IActionResult> Add(UserDTO user)
         {
             await _userRepository.Add(user);
-            return Ok();
+            return Ok(user);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(UserEntity user)
         {
             await _userRepository.Update(user);
-            return Ok();
+            return Ok(user);
         }
 
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             await _userRepository.Delete(id);
-            return Ok();
+            return Ok(id);
         }
 
         [HttpPost]
@@ -63,5 +62,21 @@ namespace MinhaApiBonita.Controllers
                 return Unauthorized("Usuário ou senha invalidos");
             }
         }
+
+        [HttpGet]
+        [Route("authenticated")]
+        [Authorize]
+        public string Authenticated() => String.Format("Autenticado - {0}", User.Identity.Name);
+
+
+        [HttpGet]
+        [Route("normal")]
+        [Authorize(Roles = "user")]
+        public string Employee() => "user";
+
+        [HttpGet]
+        [Route("admin")]
+        [Authorize(Roles = "admin")]
+        public string Manager() => "admin";
     }
 }

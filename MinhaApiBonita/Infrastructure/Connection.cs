@@ -5,7 +5,8 @@ namespace MinhaApiBonita.Infrastructure
 {
     public class Connection
     {
-        protected string connectionString = "Server=localhost;Database=aula;User=root;Password=root;";
+        protected string connectionString = "Server=viaduct.proxy.rlwy.net;Port=20821;Database=railway;User ID=root;Password=ebGcaaHCFHBhH2caAEdgde1Da51FafbG;";
+
 
         protected MySqlConnection GetConnection()
         {

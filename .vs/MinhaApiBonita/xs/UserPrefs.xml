@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<Properties>
+=======
+﻿<Properties StartupConfiguration="{06C09832-478C-449B-B5B1-8510949D4645}|Default">
+>>>>>>> 27504f2a8c2ac15ad9de9f0c8ba784925cf4fdcf
   <MonoDevelop.Ide.ItemProperties.MinhaApiBonita PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -6,12 +10,36 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="MinhaApiBonita/Program.cs">
+    <Files>
+      <File FileName="MinhaApiBonita/Program.cs" Line="71" Column="1" />
+      <File FileName="MinhaApiBonita/Controllers/UserController.cs" Line="51" Column="10" />
+      <File FileName="MinhaApiBonita/DTO/UserDTO.cs" />
+      <File FileName="MinhaApiBonita/DTO/UserLoginDTO.cs" Line="1" Column="1" />
+      <File FileName="MinhaApiBonita/DTO/UserTokenDTO.cs" />
+      <File FileName="MinhaApiBonita/Repository/UserRepository.cs" />
+      <File FileName="MinhaApiBonita/Contracts/Repository/IUserRepository.cs" />
+      <File FileName="MinhaApiBonita/Infrastructure/Authentication.cs" />
+      <File FileName="MinhaApiBonita/Infrastructure/Connection.cs" Line="8" Column="43" />
+      <File FileName="MinhaApiBonita/Entity/UserEntity.cs" Line="9" Column="27" />
+    </Files>
+>>>>>>> 27504f2a8c2ac15ad9de9f0c8ba784925cf4fdcf
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MinhaApiBonita">
+<<<<<<< HEAD
             <Node name="MinhaApiBonita" selected="True" />
+=======
+            <Node name="MinhaApiBonita" expanded="True">
+              <Node name="DTO" expanded="True" />
+              <Node name="Entity" expanded="True" />
+              <Node name="Infrastructure" expanded="True" />
+            </Node>
+>>>>>>> 27504f2a8c2ac15ad9de9f0c8ba784925cf4fdcf
           </Node>
         </State>
       </Pad>

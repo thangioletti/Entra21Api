@@ -1,34 +1,20 @@
-﻿<Properties StartupConfiguration="{06C09832-478C-449B-B5B1-8510949D4645}|Default">
+﻿<Properties>
+  <MonoDevelop.Ide.ItemProperties.MinhaApiBonita PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.MinhaApiBonita PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MinhaApiBonita/Controllers/UserController.cs">
-    <Files>
-      <File FileName="MinhaApiBonita/Program.cs" />
-      <File FileName="MinhaApiBonita/Controllers/UserController.cs" Line="51" Column="10" />
-      <File FileName="MinhaApiBonita/DTO/UserDTO.cs" />
-      <File FileName="MinhaApiBonita/DTO/UserLoginDTO.cs" />
-      <File FileName="MinhaApiBonita/DTO/UserTokenDTO.cs" />
-      <File FileName="MinhaApiBonita/Repository/UserRepository.cs" />
-      <File FileName="MinhaApiBonita/Contracts/Repository/IUserRepository.cs" />
-      <File FileName="MinhaApiBonita/Infrastructure/Authentication.cs" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MinhaApiBonita">
-            <Node name="MinhaApiBonita" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="UserController.cs" selected="True" />
-              </Node>
-            </Node>
+            <Node name="MinhaApiBonita" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -68,11 +68,20 @@ builder.Services.AddAuthentication(x =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI();
+
+
+if (app.Environment.IsProduction())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var portVar = Environment.GetEnvironmentVariable("PORT");
+    if (portVar is { Length: > 0 } && int.TryParse(portVar, out var port))
+    {
+        builder.WebHost.ConfigureKestrel(options =>
+        {
+            options.ListenAnyIP(port);
+        });
+    }
 }
 
 app.UseHttpsRedirection();
